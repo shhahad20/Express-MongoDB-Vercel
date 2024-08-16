@@ -1,8 +1,8 @@
 # Express & MongoDB on Vercel
-### I will show you how to deploy your backend that uses Express and Mongodb on Vercel 👩🏼‍💻 (TypeScript)
+### I will show you how to deploy your backend that uses Express and MongoDB on Vercel 👩🏼‍💻 (TypeScript)
 
 
-First, thing you need to know is that Vercel requires plain JS source files instead of TypeScript. So, you need to build the project and send the compiled JS files so that Vercel can parse them and serve the API.
+First thing you need to know is that Vercel requires plain JS source files instead of TypeScript. So, you need to build the project and send the compiled JS files so that Vercel can parse them and serve the API.
 
 - To initialize TypeScript configration file.
 ```sh
@@ -17,22 +17,26 @@ npx tsc --init
 ```
 
 - Run ``` tsc -w ``` command to initialize dist folder. 
-dist folder will holds all the compiled JS files. 
+The dist folder will hold all the compiled JS files. 
 - Build the server and run it. I used ( nodemon ).
-- Build your routers and conrollers and connect them with mongoDB. 
+- Build your routers and controllers and connect them with mongoDB. 
 ### 
-1. You need to install [dotenv](https://www.npmjs.com/package/dotenv). And create the **.env** file in the root directory and import it in the index.ts. 
+1. You need to install [dotenv](https://www.npmjs.com/package/dotenv). Create the **.env** file in the root directory and import it in the index.ts. 
 ###
 ``` import 'dotenv/config' ```
 
-2. Inside the .env file put your URI for the mongoDB and make sure to name the env variable ```MONGODB_URI``` because as in the mongo doc ```MONGODB_URI```
+2. Inside the .env file, put your URI for MongoDB and make sure to name the environment variable ```MONGODB_URI```, because, mentioned in the MongoDB documentation, ```MONGODB_URI```
 serves as the Atlas cluster's connection string for all Vercel projects that you link this cluster to.
 ###
-3.  Do not forget to carete .gitignore and ignore node_modules and .env files and DO NOT ignore  ❗ ``` dist ``` ❗ file.
+3.  Do not forget to carete a .gitignore file. Ignore node_modules and .env files and DO NOT ignore  ❗ ``` dist ``` ❗ folder.
 ###
-4. Build the project to make sure the dist file is updated, then run in development mode to test your server. If everthing works fine ✅ we can move on to the next and most important steps.
+4. Build the project to make sure the dist folder is updated, then run it in development mode to test your server. If everthing works fine ✅, we can move on to the next and most important steps.
+<img src="https://github.com/shhahad20/Express-MongoDB-Vercel/blob/master/assets/images/home.png" width="50%">
+
+🔸 You can use **Postman** to test the HTTP requests.
+
 ###
-5. Add ```vercel.json``` file in the root dir. 
+5. Add ```vercel.json``` file in the root directory. 
 ### 
 ```json
 {
@@ -52,34 +56,39 @@ serves as the Atlas cluster's connection string for all Vercel projects that you
     ]
   }
 ```
-6. Publish your project to Github.
+6. Publish your project to GitHub.
 ###
-7. Create a Vercel project and import the project repo.
+7. Create a Vercel project and import the repository.
 ## 
-8. Add the Environment Vars and deploy.
+8. Add the environment variables and deploy.
 <img src="https://github.com/shhahad20/Express-MongoDB-Vercel/blob/master/assets/images/env-vars.png" width="50%">
 
 ###
-9. Go to vercel dashboard and select integrations, selcet MongoDB.
+9. Go to the Vercel dashboard and select Integrations, then selcet MongoDB.
 ###
 10. Follow the steps from here [Connect mongoDB to vercel](https://www.mongodb.com/developer/products/atlas/how-to-connect-mongodb-atlas-to-vercel-using-the-new-integration/)
 & [Partner integrations](https://www.mongodb.com/docs/atlas/reference/partner-integrations/vercel/).
 ###
-11. Copy your backend and paste it in your frontend 🎉🎉
+11. Test the requests.
+<img src="https://github.com/shhahad20/Express-MongoDB-Vercel/blob/master/assets/images/lists.png" width="50%">
+
+###
+12. Copy your backend URL and paste it in your frontend 🎉🎉
 ###
 #
-### Notes:
-:information_source:
 
-
-1.  Make sure when you import in your ts files to be like this 
-###
+> :information_source: **Notes**
+ 1.  Make sure when you import in your TypeScript files to do it like this:
+ ###
    ``` import { home } from "../controllers/homeController.js"; ``` 
-   with **.js** extenstion and **{ }**. But in index.ts (the server file) use this  ``` import homeRouter from '../src/routers/homeRouter.js'; ```
+   with the **.js** extenstion and **{ }**.However, in index.ts (the server file) use this:  ``` import homeRouter from '../src/routers/homeRouter.js'; ```
  without { }.
  ###
-2. Make sure also that your ```tsconfig.json``` file to have ```"outDir": "./dist"```.
-3. Sometimes you need to **Reconnect with db** or **Re-Deploy in Vercel** .
+2. Make sure that your ```tsconfig.json``` file includes ```"outDir": "./dist"```.
+3. Sometimes you need to **Reconnect with the database** or **Re-deploy in Vercel**.
 ###
-You can check the files in the repo for more details.
+4. You can deploy your project from the terminal
+
+###
+:file_folder: You can check the files in the repo for more details. 
 #
