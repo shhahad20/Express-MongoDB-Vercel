@@ -87,7 +87,7 @@ serves as the Atlas cluster's connection string for all Vercel projects that you
 2. Make sure that your ```tsconfig.json``` file includes ```"outDir": "./dist"```.
 3. Sometimes you need to **Reconnect with the database** or **Re-deploy in Vercel**.
 ###
-4. You can deploy your project from the terminal
+4. You can deploy your project using Vercel commands [Vercel deploy commands](https://vercel.com/docs/cli/deploying-from-cli).
 
 ###
 :file_folder: You can check the files in the repo for more details. 
