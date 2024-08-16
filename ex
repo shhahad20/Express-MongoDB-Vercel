@@ -14,7 +14,9 @@ with js extenstion and {}. but in index.ts (the server file) use this (import ho
 serves as the Atlas cluster's connection string for all Vercel projects that you link this cluster to.
 9. build the project to make sure the dist file is updated, then run in development mode to test your server. 
 10. Do not forget to carete .gitignore and ignore node_modules and .env files.
-11. Add vercel.json file in the root dir.
-11. Publish you project to Github.
-12. Create a Vercel project and import the project repo.
-13. Add the Environment Vars and deploy
+12. Add vercel.json file in the root dir.
+13. Publish you project to Github.
+14. Create a Vercel project and import the project repo.
+15. Add the Environment Vars and deploy.
+16. Go to vercel dashboard and select integrations, selcet MongoDB
+17. Selcet you account, then login to your mongoDB account, follow the steps from here https://www.mongodb.com/developer/products/atlas/how-to-connect-mongodb-atlas-to-vercel-using-the-new-integration/
