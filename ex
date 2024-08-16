@@ -20,3 +20,5 @@ serves as the Atlas cluster's connection string for all Vercel projects that you
 15. Add the Environment Vars and deploy.
 16. Go to vercel dashboard and select integrations, selcet MongoDB
 17. Selcet you account, then login to your mongoDB account, follow the steps from here https://www.mongodb.com/developer/products/atlas/how-to-connect-mongodb-atlas-to-vercel-using-the-new-integration/
+https://www.mongodb.com/docs/atlas/reference/partner-integrations/vercel/
+18. Cpoy your backend and paste it in your frontend 
