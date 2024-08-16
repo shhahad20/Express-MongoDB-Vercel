@@ -57,6 +57,8 @@ serves as the Atlas cluster's connection string for all Vercel projects that you
 7. Create a Vercel project and import the project repo.
 ## 
 8. Add the Environment Vars and deploy.
+<img src="https://github.com/shhahad20/Express-MongoDB-Vercel/blob/master/assets/images/env-vars.png">
+
 ###
 9. Go to vercel dashboard and select integrations, selcet MongoDB.
 ###
@@ -67,6 +69,7 @@ serves as the Atlas cluster's connection string for all Vercel projects that you
 ###
 #
 ### Notes:
+
 1.  Make sure when you import in your ts files to be like this 
 ###
    ``` import { home } from "../controllers/homeController.js"; ``` 
@@ -74,5 +77,9 @@ serves as the Atlas cluster's connection string for all Vercel projects that you
  without { }.
  ###
 2. Make sure also that your ```tsconfig.json``` file to have ```"outDir": "./dist"```.
-3. Sometimes you need to **Reconnect with db** or **Re-Deploy** .
+3. Sometimes you need to **Reconnect with db** or **Re-Deploy in Vercel** .
+###
+You can check the files in the repo for more details.
 #
+>[!NOTE]
+
