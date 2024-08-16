@@ -57,7 +57,7 @@ serves as the Atlas cluster's connection string for all Vercel projects that you
 7. Create a Vercel project and import the project repo.
 ## 
 8. Add the Environment Vars and deploy.
-<img src="https://github.com/shhahad20/Express-MongoDB-Vercel/blob/master/assets/images/env-vars.png">
+<img src="https://github.com/shhahad20/Express-MongoDB-Vercel/blob/master/assets/images/env-vars.png" width="20%">
 
 ###
 9. Go to vercel dashboard and select integrations, selcet MongoDB.
@@ -81,5 +81,3 @@ serves as the Atlas cluster's connection string for all Vercel projects that you
 ###
 You can check the files in the repo for more details.
 #
->[!NOTE]
-
